@@ -1,0 +1,47 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.idea/
+.vscode/
+.DS_Store
+
+# Restricted or participant-derived data
+data/
+datasets/
+raw_data/
+processed_data/
+private_data/
+*.mat
+*.bdf
+*.edf
+*.set
+*.fdt
+*.npz
+*.npy
+
+# Trained models, caches, and competition submissions
+checkpoints/
+weights/
+results/
+outputs/
+submissions/
+logs/
+tmp/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Local secrets and dataset paths
+.env
+.env.*
+config.local.*
+*_credentials.*
