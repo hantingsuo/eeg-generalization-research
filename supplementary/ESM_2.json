@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "online_resource_number": 2,
+  "article_title": "Evaluation Protocols and Cross-Subject Generalization in EEG Emotion Recognition",
+  "journal": "Applied Intelligence",
+  "authors": [
+    "Hanting Suo",
+    "Yuwen Li"
+  ],
+  "affiliations": [
+    "School of Instrument Science and Engineering, Southeast University, Nanjing 210096, China",
+    "The State Key Laboratory of Bioelectronics, Southeast University, Nanjing 210096, China"
+  ],
+  "corresponding_author": {
+    "name": "Yuwen Li",
+    "email": "liyuwen@seu.edu.cn",
+    "orcid": "0000-0003-3060-836X"
+  },
+  "caption": "Machine-readable CF-TRE component order, selected mean- and tail-risk parameters, full-precision mixture weights, and source-file checksum.",
+  "scope": "Selected CF-TRE configuration parameters only; no trial-, window-, subject-, or subject-session-level labels, predictions, or metrics are included.",
+  "component_order": [
+    "linear_de310",
+    "linear_structural245",
+    "linear_all555",
+    "rbf_de310",
+    "rbf_all555",
+    "xgboost_all555",
+    "lightgbm_all555"
+  ],
+  "source": {
+    "repository_relative_path": "results/cf_tre/g1/g1_outer_test_result.json",
+    "sha256": "83A0D211070500187CC0678042A254358307947A9F8D361E3FBB0867C886AB19"
+  },
+  "notes": {
+    "lambda_tail": "Mixture coefficient multiplying empirical CVaR in the fitted mean/CVaR objective.",
+    "alpha": "VaR quantile level; the corresponding upper-tail mass is 1-alpha.",
+    "delta": "Allowed increase in mean environment log loss relative to the OOF-best single component.",
+    "mean_control_alpha": "The stored alpha value is inert when lambda_tail=0."
+  },
+  "datasets": {
+    "SEED": {
+      "selected_tail_risk": {
+        "lambda_tail": 0.75,
+        "alpha": 0.67,
+        "delta": 0.0,
+        "weights": [
+          0.1808485428888424,
+          0.1044570719746394,
+          0.036395379687067075,
+          0.2535503499609486,
+          0.18345534659920987,
+          0.11567365381206707,
+          0.12561965507722578
+        ]
+      },
+      "selected_mean_risk_control": {
+        "lambda_tail": 0.0,
+        "alpha": 0.8,
+        "delta": 0.0,
+        "weights": [
+          0.2850001599957752,
+          0.06693946159728863,
+          0.04777817754926334,
+          0.20592650350298738,
+          0.04719576589915263,
+          0.11531345143021111,
+          0.23184648002532168
+        ]
+      }
+    },
+    "SEED-IV": {
+      "selected_tail_risk": {
+        "lambda_tail": 0.25,
+        "alpha": 0.67,
+        "delta": 0.0,
+        "weights": [
+          0.3288458061791317,
+          0.1433732291006174,
+          0.0517417927009323,
+          0.1511130100759164,
+          0.06396133376992434,
+          0.13172350925537868,
+          0.1292413189180992
+        ]
+      },
+      "selected_mean_risk_control": {
+        "lambda_tail": 0.0,
+        "alpha": 0.8,
+        "delta": 0.0,
+        "weights": [
+          0.335001662065595,
+          0.11351029648416651,
+          0.05311598319057763,
+          0.174830585413816,
+          0.064549428098917,
+          0.14229395637427858,
+          0.11669808837264943
+        ]
+      }
+    }
+  }
+}

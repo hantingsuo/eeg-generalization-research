@@ -6,6 +6,7 @@ import argparse
 import importlib.util
 import json
 import os
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -16,7 +17,7 @@ import torch
 
 EXPECTED_COMMIT = "39dc27e504e14138767b87ce8bce485380fd4f5a"
 DEFAULT_LIBEER_ROOT = Path(
-    os.environ.get("LIBEER_ROOT", "external/LibEER")
+    os.environ.get("LIBEER_CODE_ROOT", "third_party/libeer/LibEER")
 )
 
 

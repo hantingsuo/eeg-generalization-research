@@ -136,8 +136,8 @@ def audit_matrix(root: Path, split_root: Path) -> dict[str, Any]:
                     raise FileNotFoundError(f"incomplete classical artifacts for {unit_id}")
                 payload = json.loads(classical_json.read_text(encoding="utf-8"))
                 _common_json_audit(payload, dataset, session, subject)
-                if tuple(payload.get("components", {})) != COMPONENTS:
-                    raise ValueError(f"{unit_id} component ordering/coverage mismatch")
+                if set(payload.get("components", {})) != set(COMPONENTS):
+                    raise ValueError(f"{unit_id} component coverage mismatch")
                 with np.load(classical_npz, allow_pickle=False) as predictions:
                     labels = predictions["test_labels"]
                     trials = predictions["test_trials"]

@@ -12,12 +12,12 @@ build/
 .vscode/
 .DS_Store
 
-# Restricted or participant-derived data
-data/
-datasets/
-raw_data/
-processed_data/
-private_data/
+# Restricted or participant-derived data at the repository root
+/data/
+/datasets/
+/raw_data/
+/processed_data/
+/private_data/
 *.mat
 *.bdf
 *.edf

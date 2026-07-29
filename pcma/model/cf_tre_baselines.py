@@ -68,9 +68,10 @@ def load_track_a_unit(
     dataset: str,
     session: int,
     subject: int,
+    expected_protocol: str = PROTOCOL,
 ) -> dict[str, Any]:
     payload = json.loads(Path(manifest_path).read_text(encoding="utf-8"))
-    if payload.get("protocol") != PROTOCOL:
+    if payload.get("protocol") != expected_protocol:
         raise ValueError(f"protocol mismatch: {payload.get('protocol')!r}")
     if payload.get("dataset") != dataset:
         raise ValueError(f"dataset mismatch: expected {dataset!r}, found {payload.get('dataset')!r}")
@@ -212,6 +213,7 @@ def build_estimator(
     train_labels: np.ndarray,
     train_trials: np.ndarray,
     seed: int,
+    calibration_splits: int = 3,
 ) -> Any:
     spec = COMPONENT_SPECS[component]
     params = dict(candidate)
@@ -225,7 +227,14 @@ def build_estimator(
             **params,
         )
         pipeline = Pipeline([("scale", StandardScaler()), ("svm", svc)])
-        cv = calibration_cv_by_trial(train_labels, train_trials, seed=seed)
+        if calibration_splits < 2:
+            raise ValueError("calibration_splits must be at least two")
+        cv = calibration_cv_by_trial(
+            train_labels,
+            train_trials,
+            seed=seed,
+            n_splits=calibration_splits,
+        )
         return CalibratedClassifierCV(estimator=pipeline, method="sigmoid", cv=cv, n_jobs=1, ensemble=True)
     if spec.family == "xgboost":
         from xgboost import XGBClassifier

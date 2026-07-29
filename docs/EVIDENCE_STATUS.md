@@ -1,26 +1,25 @@
 # Public evidence status
 
-Last updated: 2026-07-14
+Last updated: 2026-07-29
 
-This is a concise public ledger, not a paper draft.
+This ledger records the evidence boundary used in the accompanying manuscript.
 
 ## Supported
 
-- Rich handcrafted features, an RBF SVM, and video-level aggregation are the strongest practical competition pipeline tested here.
-- The depression cohort was consistently harder under within-population evaluation, without establishing a directional transfer mechanism or clinical cause.
-- Tested alignment and adaptation implementations did not pass their frozen retain gates.
-- Protocol-matched target-free LibEER DGCNN baselines were reproduced within the project's frozen tolerances.
-- A labelled-test-selected archival protocol reproduced a high compatibility score, but the same result must not be presented as clean generalization.
-- Strict all-subject five-fold evaluation completed for SEED and SEED-IV with subject-balanced accuracies of 0.5348 and 0.3954, respectively.
+- A DGCNN compatibility run on SEED was within 1.47 percentage points of the selected public reference.
+- The corresponding SEED-IV compatibility result differed by 3.40 percentage points. Eight implementation-audit groups did not explain the difference, so it is reported as unresolved and used only as secondary sensitivity evidence.
+- Strict subject-balanced five-fold evaluation produced accuracies of 0.5348 on SEED and 0.3954 on SEED-IV.
+- Training-participant trial accuracies reached 0.9990 on SEED and 0.9920 on SEED-IV under the same strict folds. This rules out simple failure to fit the training data but does not identify the cause of the generalization gap.
+- Repeated selection using labelled test performance increased the matched SEED DGCNN score by 0.1036 relative to the fixed-epoch comparison.
+- Participant rankings were not stable across sessions in the primary SEED-IV analysis.
+- The CF-TRE tail objective changed the intended tail-loss criterion, but it did not produce a consistent recognition-accuracy advantage in the separate final evaluation.
 
-## Rejected or not supported
+## Not claimed
 
-- A robust HC-to-DEP-specific transfer asymmetry.
-- A clean high-accuracy SEED claim under the frozen trial-disjoint protocol.
-- Reliable persistence of the same difficult subjects across independent SEED-IV blocks/sessions.
-- Biomarker, severity, or PHQ-9 claims after the MODMA ERP cue-decoding gate failed.
-- A new-method or state-of-the-art claim based on the current evidence.
+- exact reproduction of the historical SEED-IV public run;
+- a new neural architecture or state-of-the-art classifier;
+- a representation-independent advantage for the tail-risk objective;
+- persistent "difficult participant" identities;
+- a clinical biomarker or causal explanation for participant-level differences.
 
-## Ongoing
-
-The project may support an empirical paper about evaluation integrity, protocol sensitivity, and generalization estimates. Any future method claim must be evaluated under a predeclared protocol and reported independently of archival compatibility settings.
+Compatibility results, strict subject-disjoint estimates, and supporting stress tests must remain labelled separately because they answer different questions.

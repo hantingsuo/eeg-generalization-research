@@ -73,6 +73,29 @@ def test_official_seediv_tables_and_all_three_label_sequences():
     )
 
 
+def test_git_commit_uses_command_scoped_safe_directory(monkeypatch):
+    observed = {}
+    repo = Path("C:/tmp/pinned-libeer")
+
+    class Completed:
+        stdout = FULL_COMMIT + "\n"
+
+    def fake_run(command, **kwargs):
+        observed["command"] = command
+        observed["kwargs"] = kwargs
+        return Completed()
+
+    monkeypatch.setattr(seediv.subprocess, "run", fake_run)
+    assert seediv._git_commit(repo) == FULL_COMMIT
+    assert observed["command"][:3] == [
+        "git",
+        "-c",
+        f"safe.directory={repo.resolve().as_posix()}",
+    ]
+    assert observed["command"][-3:] == [str(repo), "rev-parse", "HEAD"]
+    assert observed["kwargs"]["check"] is True
+
+
 def test_streaming_loader_sorts_trials_and_writes_provenance_cache(tmp_path, monkeypatch):
     dataset_root, libeer_root = _make_synthetic_recording(tmp_path)
     fake = _FakePreprocess()

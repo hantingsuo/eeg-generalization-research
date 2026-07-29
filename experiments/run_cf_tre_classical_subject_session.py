@@ -37,7 +37,9 @@ from pcma.model.cf_tre_baselines import (
 
 DEFAULT_SEED_ROOT = Path("data/SEED/SEED/SEED/SEED_EEG/ExtractedFeatures_1s")
 DEFAULT_SEEDIV_ROOT = Path("data/SEED/SEED_IV")
-DEFAULT_LIBEER_ROOT = Path(os.environ.get("LIBEER_ROOT", "external/LibEER"))
+DEFAULT_LIBEER_ROOT = Path(
+    os.environ.get("LIBEER_CODE_ROOT", "third_party/libeer/LibEER")
+)
 DEFAULT_SEEDIV_CACHE = Path("results/libeer_gate_b/cache_seediv_1s_de_lds_39dc27e")
 
 

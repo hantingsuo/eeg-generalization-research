@@ -3,7 +3,7 @@
 import os, glob
 import numpy as np
 
-ROOT = os.environ.get("PCMA_SEED_ROOT", os.path.join("data", "SEED"))
+ROOT = os.environ.get("SEED_DATA_ROOT", os.path.join("data", "SEED"))
 
 def load_mat(path):
     try:
