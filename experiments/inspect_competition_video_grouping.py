@@ -10,9 +10,10 @@ from pcma.data.competition import load_competition, verify_video_grouping
 
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "results")
-MOSHISHIBIE_AUDIT = Path(
+SOURCE_AUDIT = Path(
     os.environ.get(
-        "PCMA_SOURCE_VIDEO_AUDIT", "results/source_video_grouping_audit.json"
+        "COMPETITION_VIDEO_AUDIT",
+        "results/video_grouping_audit.json",
     )
 )
 
@@ -23,10 +24,10 @@ def main():
         "local_cache": verify_video_grouping(data.subject, data.y, data.video_id),
         "source_audit": None,
     }
-    if MOSHISHIBIE_AUDIT.exists():
-        source = json.loads(MOSHISHIBIE_AUDIT.read_text(encoding="utf-8"))
+    if SOURCE_AUDIT.exists():
+        source = json.loads(SOURCE_AUDIT.read_text(encoding="utf-8"))
         audit["source_audit"] = {
-            "path": str(MOSHISHIBIE_AUDIT),
+            "path": str(SOURCE_AUDIT),
             "conclusion": source.get("conclusion", {}),
             "train_cache_vs_raw": {
                 key: source.get("train_cache_vs_raw", {}).get(key)

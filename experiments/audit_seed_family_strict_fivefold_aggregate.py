@@ -921,10 +921,10 @@ def _expected_batch_command(
     root = Path(__file__).resolve().parents[1]
     spec = DATASET_SPECS[dataset]
     command = [
-        os.environ.get("PCMA_PYTHON", sys.executable),
+        sys.executable,
         str(root / "experiments" / f"run_{dataset}_dgcnn_subject_fold.py"),
         "--libeer-root",
-        os.environ.get("LIBEER_ROOT", str(root / "external" / "LibEER")),
+        os.environ.get("LIBEER_REPO_ROOT", "third_party/libeer"),
         "--expected-commit",
         SHORT_LIBEER_COMMIT,
     ]

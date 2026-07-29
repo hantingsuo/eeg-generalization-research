@@ -101,3 +101,19 @@ def test_probability_normalization_clips_and_restores_row_sums() -> None:
     normalized = normalize_probabilities(raw)
     np.testing.assert_allclose(normalized.sum(axis=1), 1.0, rtol=0, atol=1e-12)
     assert np.all(normalized > 0)
+
+
+def test_inner_svm_calibration_can_use_two_complete_trial_folds() -> None:
+    from pcma.model.cf_tre_baselines import build_estimator
+
+    labels = np.repeat(np.asarray([0, 1, 2, 0, 1, 2]), 3)
+    trials = np.repeat(np.arange(1, 7), 3)
+    estimator = build_estimator(
+        "linear_de310",
+        {"C": 1.0},
+        train_labels=labels,
+        train_trials=trials,
+        seed=2024,
+        calibration_splits=2,
+    )
+    assert len(estimator.cv) == 2

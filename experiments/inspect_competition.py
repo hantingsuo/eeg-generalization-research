@@ -1,14 +1,15 @@
 # experiments/inspect_competition.py
 """One-off: verify the competition npz shapes/keys before building loaders."""
-import os
+import argparse
+from pathlib import Path
+
 import numpy as np
 
-PATH = os.environ.get(
-    "PCMA_COMPETITION_DATA", "data/competition/train_data.npz"
-)
-
 def main():
-    d = np.load(PATH, allow_pickle=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("path", type=Path)
+    args = parser.parse_args()
+    d = np.load(args.path, allow_pickle=True)
     print("keys:", list(d.keys()))
     for k in d.keys():
         a = d[k]

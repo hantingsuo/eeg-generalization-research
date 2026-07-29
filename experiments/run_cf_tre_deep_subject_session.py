@@ -33,7 +33,9 @@ from pcma.model.cf_tre_baselines import (
 EXPECTED_COMMIT = "39dc27e504e14138767b87ce8bce485380fd4f5a"
 DEFAULT_SEED_ROOT = Path("data/SEED/SEED/SEED/SEED_EEG/ExtractedFeatures_1s")
 DEFAULT_SEEDIV_ROOT = Path("data/SEED/SEED_IV")
-DEFAULT_LIBEER_ROOT = Path(os.environ.get("LIBEER_ROOT", "external/LibEER"))
+DEFAULT_LIBEER_ROOT = Path(
+    os.environ.get("LIBEER_CODE_ROOT", "third_party/libeer/LibEER")
+)
 DEFAULT_SEEDIV_CACHE = Path("results/libeer_gate_b/cache_seediv_1s_de_lds_39dc27e")
 
 
@@ -52,11 +54,14 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--libeer-root", type=Path, default=DEFAULT_LIBEER_ROOT)
     result.add_argument("--seediv-cache", type=Path, default=DEFAULT_SEEDIV_CACHE)
     result.add_argument("--optimization-seed", type=int, default=2024)
+    result.add_argument("--protocol", default="cf_tre_seed_family_v1")
+    result.add_argument("--stage", default="G0-B")
     result.add_argument("--epochs", type=int, default=150)
     result.add_argument("--batch-size", type=int, default=32)
     result.add_argument("--eval-batch-size", type=int, default=512)
     result.add_argument("--lr", type=float)
     result.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
+    result.add_argument("--upstream-sampler", action="store_true")
     result.add_argument("--validation-only", action="store_true")
     return result
 
@@ -203,6 +208,7 @@ def main(argv: Sequence[str] | None = None) -> None:
         dataset=args.dataset,
         session=args.session,
         subject=args.subject,
+        expected_protocol=args.protocol,
     )
     recording, provenance = _load_recording(args)
     train_x, train_y, train_trials = _partition(recording, unit["train_trials"])
@@ -234,13 +240,17 @@ def main(argv: Sequence[str] | None = None) -> None:
             model.parameters(), lr=learning_rate, weight_decay=1e-4, eps=1e-4
         )
         criterion = nn.CrossEntropyLoss()
-        generator = torch.Generator().manual_seed(args.optimization_seed)
+        loader_kwargs: dict[str, Any] = {}
+        if not args.upstream_sampler:
+            loader_kwargs["generator"] = torch.Generator().manual_seed(
+                args.optimization_seed
+            )
         train_loader = DataLoader(
             TensorDataset(torch.from_numpy(train_x), torch.from_numpy(train_y)),
             batch_size=args.batch_size,
             shuffle=True,
             num_workers=0,
-            generator=generator,
+            **loader_kwargs,
         )
 
         best_value = float("-inf")
@@ -336,7 +346,7 @@ def main(argv: Sequence[str] | None = None) -> None:
 
     checkpoint_payload = {
         "model": best_state,
-        "protocol": "cf_tre_seed_family_v1",
+        "protocol": args.protocol,
         "dataset": args.dataset,
         "model_name": args.model,
         "session": args.session,
@@ -347,8 +357,8 @@ def main(argv: Sequence[str] | None = None) -> None:
         "libeer_commit": commit,
     }
     result = {
-        "protocol": "cf_tre_seed_family_v1",
-        "stage": "G0-B",
+        "protocol": args.protocol,
+        "stage": args.stage,
         "runner": "pinned_libeer_deep_subject_session_v1",
         "dataset": args.dataset,
         "model": args.model,
@@ -356,6 +366,7 @@ def main(argv: Sequence[str] | None = None) -> None:
         "subject": args.subject,
         "unit_id": unit["unit_id"],
         "optimization_seed": args.optimization_seed,
+        "sampler_semantics": "upstream_global_rng" if args.upstream_sampler else "dedicated_generator",
         "epochs": args.epochs,
         "batch_size": args.batch_size,
         "eval_batch_size": args.eval_batch_size,

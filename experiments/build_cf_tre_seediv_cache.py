@@ -17,7 +17,9 @@ def main() -> None:
     parser.add_argument(
         "--libeer-root",
         type=Path,
-        default=Path(os.environ.get("LIBEER_ROOT", "external/LibEER")),
+        default=Path(
+            os.environ.get("LIBEER_CODE_ROOT", "third_party/libeer/LibEER")
+        ),
     )
     parser.add_argument(
         "--cache-root",

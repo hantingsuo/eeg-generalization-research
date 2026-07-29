@@ -1,11 +1,14 @@
 cff-version: 1.2.0
 message: "Please cite this software repository if you use its code or protocol tools."
-title: "Protocol-Aware EEG Generalization Research"
+title: "Evaluation Protocols and Cross-Subject Generalization in EEG Emotion Recognition: Research Code"
 type: software
 authors:
   - family-names: Suo
     given-names: Hanting
+  - family-names: Li
+    given-names: Yuwen
+    orcid: "https://orcid.org/0000-0003-3060-836X"
 repository-code: "https://github.com/hantingsuo/eeg-generalization-research"
 license: BSD-3-Clause
-version: 0.1.0
-date-released: 2026-07-14
+version: 1.0.0
+date-released: 2026-07-29

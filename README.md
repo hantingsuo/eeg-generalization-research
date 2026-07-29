@@ -1,32 +1,24 @@
-# Protocol-Aware EEG Generalization Research
+# Evaluation Protocols and Cross-Subject Generalization in EEG Emotion Recognition
 
-Research code for studying EEG affective-computing pipelines under explicit subject, session, target-access, and aggregation protocols. The project emphasizes auditable evaluation and honest negative results rather than presenting protocol-sensitive scores as model innovation.
+Research code accompanying the manuscript *Evaluation Protocols and Cross-Subject Generalization in EEG Emotion Recognition*.
 
-> Status: active research. The EEG manuscript is not yet written, and this repository does not claim a new state-of-the-art method or a clinical biomarker.
+The repository studies how subject partitioning, checkpoint selection, admissible target information, and aggregation change the interpretation of EEG emotion-recognition results. It supports an evaluation-methodology contribution and does not claim a new classifier, state-of-the-art accuracy, or a clinical biomarker.
 
-## Current evidence boundary
+## What is included
 
-- Rich handcrafted EEG features with an RBF SVM and video-level aggregation are the strongest practical competition pipeline tested in this project.
-- Several alignment/adaptation variants did not pass frozen retention gates.
-- A high archival DGCNN score was reproduced only under a labelled-test-selected compatibility protocol; it is not clean generalization evidence.
-- Strict subject-balanced five-fold evaluation is complete for SEED and SEED-IV, with materially lower estimates than the archival compatibility protocol.
-- A MODMA ERP cue-decoding gate failed, so downstream PHQ-9 inference was not run.
+- `pcma/`: data interfaces, feature pipelines, split logic, models, metrics, and statistical utilities.
+- `experiments/`: compatibility checks, strict subject-disjoint evaluation, learning-curve diagnostics, participant-ranking analyses, CF-TRE experiments, controls, and independent audit entry points.
+- `tests/`: unit, protocol, and artifact-audit tests.
+- `supplementary/ESM_2.json`: the final machine-readable CF-TRE parameters and mixture weights submitted as Online Resource 2.
+- `docs/`: the public evidence boundary, data policy, and reproduction guidance.
 
-See [docs/EVIDENCE_STATUS.md](docs/EVIDENCE_STATUS.md) for the concise public ledger.
+The frozen numerical results reported in the manuscript were produced before this public release. Scripts that consume restricted datasets or frozen result artifacts fail closed when those inputs are absent.
 
-## Repository map
+## Data are not redistributed
 
-- `pcma/` — data interfaces, feature pipelines, model implementations, splits, metrics, and statistical utilities.
-- `experiments/` — runnable experiment, aggregation, and audit entry points.
-- `tests/` — protocol and implementation tests.
-- `scripts/generate_synthetic_eeg.py` — creates a small synthetic fixture for smoke testing without redistributing real EEG.
-- `docs/` — data policy, evidence status, and reproduction guidance.
+SEED, SEED-IV, and the competition EEG release are governed by their providers' access or licence terms. This repository contains no raw EEG, processed participant arrays, private labels, individual predictions, submissions, credentials, or trained checkpoints.
 
-## Data and weights are not included
-
-SEED/SEED-IV and competition EEG data are governed by their providers' access terms. This repository therefore contains no raw EEG, processed participant arrays, download credentials, private labels, submissions, or model checkpoints trained on restricted data.
-
-Follow [docs/DATA_POLICY.md](docs/DATA_POLICY.md) and obtain each dataset directly from its provider. Do not open an issue asking maintainers to share restricted files or access credentials.
+Obtain each dataset directly from its provider and keep it outside the repository. See [the data policy](docs/DATA_POLICY.md) before configuring local paths.
 
 ## Installation
 
@@ -37,19 +29,18 @@ python -m pip install -e .
 python -m pip install pytest
 ```
 
-## Safe smoke test
+## Tests
 
 ```bash
-python scripts/generate_synthetic_eeg.py --output sample_data/synthetic_eeg.npz
 pytest -q
 ```
 
-Some tests and experiment scripts require provider-obtained datasets and are skipped or fail closed when those inputs are absent. See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+Some real-data and frozen-artifact checks require files that cannot be redistributed. Their expected inputs and evidence boundaries are described in [the reproduction guide](docs/REPRODUCIBILITY.md).
 
-## Project role
+## Citation
 
-Hanting Suo serves as project lead, coordinating protocol design, implementation, experiment auditing, and evidence tracking. No author order is claimed before the manuscript is completed.
+Use the metadata in [`CITATION.cff`](CITATION.cff) when citing the software. Please cite the manuscript separately once its bibliographic record is available.
 
 ## License
 
-Original code and documentation are released under the [BSD 3-Clause License](LICENSE). Dataset licenses and third-party code are separate; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Original code and documentation are released under the [BSD 3-Clause License](LICENSE). Dataset licences and third-party code remain separate; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
