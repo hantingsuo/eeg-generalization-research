@@ -1,7 +1,7 @@
 # Code for the 2026 revision (Journal of Neural Engineering submission)
 
-This directory set accompanies the manuscript *Choosing checkpoints on validation
-participants yields no cross-participant gain in EEG emotion decoding*. It extends
+This directory set accompanies the manuscript *Searching more checkpoints on
+validation participants adds no cross-participant gain in EEG emotion decoding*. It extends
 the earlier release in this repository with the analyses added in September 2026.
 
 ## What was added
