@@ -1,0 +1,542 @@
+{
+ "provenance": {
+  "same_session_cells": 300,
+  "cross_session_cells": 276,
+  "metric": "window",
+  "base_budget": 5,
+  "bootstrap_seed": 20260916,
+  "n_bootstrap": 10000,
+  "refitting": "none; read from frozen per-cell result.json contrasts",
+  "boundary": "Post hoc re-analysis of trajectories whose results were already known. Both pools supply labels for their own selection, so this measures retention across trials of the same participant, not zero-label cross-subject generalization."
+ },
+ "groups": {
+  "same_session/seed/dgcnn": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 1.7330895548344045,
+    "retained_gain_pp": 0.2200664002291671,
+    "retention_ratio": 0.12697924329143756,
+    "retention_ratio_ci": [
+     -0.3503325543052069,
+     0.551634993234578
+    ],
+    "retention_slope": 0.49326425438001326,
+    "retention_slope_ci": [
+     -0.3827216309420891,
+     1.6036711224999494
+    ],
+    "correlation": 0.2507823376091573
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 3.080305573438199,
+    "retained_gain_pp": 0.13953097057428088,
+    "retention_ratio": 0.04529776908416853,
+    "retention_ratio_ci": [
+     -0.3383943123557328,
+     0.40953179673218704
+    ],
+    "retention_slope": 0.9487477492277475,
+    "retention_slope_ci": [
+     -0.19134757982336084,
+     2.081121084436699
+    ],
+    "correlation": 0.5313430026411804
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 4.884332521594219,
+    "retained_gain_pp": -0.15974465713600208,
+    "retention_ratio": -0.032705524537846635,
+    "retention_ratio_ci": [
+     -0.31755457894488576,
+     0.2527439466197398
+    ],
+    "retention_slope": 0.8654578296586534,
+    "retention_slope_ci": [
+     0.07817395468765667,
+     2.065791715496705
+    ],
+    "correlation": 0.5110914356792717
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 6.241043933033733,
+    "retained_gain_pp": -1.2384329920360586,
+    "retention_ratio": -0.19843362830392125,
+    "retention_ratio_ci": [
+     -0.4664319672408946,
+     0.039626129918963006
+    ],
+    "retention_slope": 0.751137598834534,
+    "retention_slope_ci": [
+     -0.2070799614580947,
+     1.2684400506651672
+    ],
+    "correlation": 0.5403008786946946
+   }
+  },
+  "same_session/seed/mlp": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 0.3533994565510075,
+    "retained_gain_pp": -0.06954602593770491,
+    "retention_ratio": -0.19679154749256683,
+    "retention_ratio_ci": [
+     -0.6477555488734213,
+     0.35483868106910077
+    ],
+    "retention_slope": -1.001090650257315,
+    "retention_slope_ci": [
+     -2.5139277695859175,
+     -0.37521557626407087
+    ],
+    "correlation": -0.3729869164382239
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 0.7768043807329672,
+    "retained_gain_pp": -0.14312956369796126,
+    "retention_ratio": -0.18425432096933966,
+    "retention_ratio_ci": [
+     -0.5029062872181573,
+     0.14704426017613273
+    ],
+    "retention_slope": -0.21336380949786646,
+    "retention_slope_ci": [
+     -1.0543990329153434,
+     0.3246153541313657
+    ],
+    "correlation": -0.15753615351659261
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 1.2468622341228779,
+    "retained_gain_pp": -0.2339856042499359,
+    "retention_ratio": -0.18765954878289842,
+    "retention_ratio_ci": [
+     -0.3702625397740382,
+     0.007649256166380745
+    ],
+    "retention_slope": -0.16301811510954828,
+    "retention_slope_ci": [
+     -0.760286678780293,
+     0.187455588641112
+    ],
+    "correlation": -0.18260278399875948
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 1.963010561341178,
+    "retained_gain_pp": -0.16195003098107064,
+    "retention_ratio": -0.08250084547197868,
+    "retention_ratio_ci": [
+     -0.38242266679858067,
+     0.1655499149830682
+    ],
+    "retention_slope": 0.6083418918402077,
+    "retention_slope_ci": [
+     -0.09677616093049066,
+     1.000309357212103
+    ],
+    "correlation": 0.5901362912781726
+   }
+  },
+  "cross_session/seed/dgcnn": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 2.39282519881602,
+    "retained_gain_pp": 1.5771556758560716,
+    "retention_ratio": 0.6591186337541308,
+    "retention_ratio_ci": [
+     0.1530515872074802,
+     1.0305545540620908
+    ],
+    "retention_slope": 0.9387016026704483,
+    "retention_slope_ci": [
+     0.5705364530907951,
+     1.6465143627421175
+    ],
+    "correlation": 0.7559606516565619
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 4.599810345211357,
+    "retained_gain_pp": 3.2244353501111442,
+    "retention_ratio": 0.7009931080023658,
+    "retention_ratio_ci": [
+     0.31785225057172806,
+     1.0468859190776458
+    ],
+    "retention_slope": 1.0058421657799042,
+    "retention_slope_ci": [
+     0.6663498910690735,
+     1.8362116566334648
+    ],
+    "correlation": 0.6727592987394125
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 6.513599327062577,
+    "retained_gain_pp": 4.019272356042839,
+    "retention_ratio": 0.6170585807057004,
+    "retention_ratio_ci": [
+     0.3656047012695292,
+     0.8647152536959521
+    ],
+    "retention_slope": 0.5688809322995733,
+    "retention_slope_ci": [
+     0.30094741304641653,
+     1.3855627097338494
+    ],
+    "correlation": 0.4945796346457692
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 8.064347284201851,
+    "retained_gain_pp": 4.46865564032584,
+    "retention_ratio": 0.5541249009798955,
+    "retention_ratio_ci": [
+     0.2541313649869534,
+     0.8233817685376214
+    ],
+    "retention_slope": 0.9239696990096696,
+    "retention_slope_ci": [
+     0.4074793877430078,
+     2.063528327597467
+    ],
+    "correlation": 0.6141483170342472
+   }
+  },
+  "cross_session/seed/mlp": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 1.5304457330911756,
+    "retained_gain_pp": 1.5432339093358327,
+    "retention_ratio": 1.0083558508270842,
+    "retention_ratio_ci": [
+     0.5796721071391995,
+     1.603083003497476
+    ],
+    "retention_slope": 0.9618309072442638,
+    "retention_slope_ci": [
+     0.6940549763189372,
+     1.1136211555061306
+    ],
+    "correlation": 0.8763649787835386
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 2.6539255339753445,
+    "retained_gain_pp": 2.149520835975818,
+    "retention_ratio": 0.8099401465707392,
+    "retention_ratio_ci": [
+     0.3762446987210486,
+     1.2009560449477341
+    ],
+    "retention_slope": 0.8663200867349383,
+    "retention_slope_ci": [
+     0.34274213879713744,
+     1.2040566949794573
+    ],
+    "correlation": 0.7726865840026287
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 4.080777914670572,
+    "retained_gain_pp": 3.2352872015488914,
+    "retention_ratio": 0.7928113877302401,
+    "retention_ratio_ci": [
+     0.4249145123125479,
+     1.0106793363422526
+    ],
+    "retention_slope": 1.018961230066297,
+    "retention_slope_ci": [
+     0.5567382375501787,
+     1.13271641523465
+    ],
+    "correlation": 0.9288105327315166
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 5.142524818857763,
+    "retained_gain_pp": 4.196416449534815,
+    "retention_ratio": 0.8160225953886415,
+    "retention_ratio_ci": [
+     0.5718383240174785,
+     0.9547448035431475
+    ],
+    "retention_slope": 1.0467939274590596,
+    "retention_slope_ci": [
+     0.708322999144916,
+     1.1422047249817713
+    ],
+    "correlation": 0.9646876200125503
+   }
+  },
+  "cross_session/seediv/dgcnn": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 2.1339687340482794,
+    "retained_gain_pp": 0.9238293512471544,
+    "retention_ratio": 0.4329160669072172,
+    "retention_ratio_ci": [
+     -0.30735216681613486,
+     0.9484015190686376
+    ],
+    "retention_slope": 0.8565711199927861,
+    "retention_slope_ci": [
+     -0.047928320938905096,
+     1.4451424730048485
+    ],
+    "correlation": 0.623630261429611
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 4.473484075740515,
+    "retained_gain_pp": 1.3825525854170315,
+    "retention_ratio": 0.30905499203954845,
+    "retention_ratio_ci": [
+     0.08239044751395146,
+     0.5212598632461709
+    ],
+    "retention_slope": 0.4373591641782568,
+    "retention_slope_ci": [
+     -0.20177109762033604,
+     0.7820102025384851
+    ],
+    "correlation": 0.511147568044622
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 6.5229068481010035,
+    "retained_gain_pp": 2.8597314798640565,
+    "retention_ratio": 0.4384136622611133,
+    "retention_ratio_ci": [
+     0.054447111031788266,
+     0.7566889717377784
+    ],
+    "retention_slope": 0.9037910260233386,
+    "retention_slope_ci": [
+     0.10364874682874836,
+     1.5413419066657623
+    ],
+    "correlation": 0.6464993670460151
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 7.954194093601699,
+    "retained_gain_pp": 4.269957908915358,
+    "retention_ratio": 0.5368184204041594,
+    "retention_ratio_ci": [
+     0.28418654847185776,
+     0.7730062196877325
+    ],
+    "retention_slope": 0.5848564858617643,
+    "retention_slope_ci": [
+     0.0340211542301319,
+     1.0382540829835774
+    ],
+    "correlation": 0.527175501782382
+   }
+  },
+  "cross_session/seediv/mlp": {
+   "10": {
+    "n_participants": 15,
+    "apparent_gain_pp": 1.1767866231041229,
+    "retained_gain_pp": 0.860730388717325,
+    "retention_ratio": 0.731424348151489,
+    "retention_ratio_ci": [
+     0.17968206483945298,
+     1.2398146794714684
+    ],
+    "retention_slope": 0.7982052386966919,
+    "retention_slope_ci": [
+     0.38347113163941177,
+     1.2557055708996325
+    ],
+    "correlation": 0.5993147639137222
+   },
+   "20": {
+    "n_participants": 15,
+    "apparent_gain_pp": 2.6023981269556353,
+    "retained_gain_pp": 1.3649621828481224,
+    "retention_ratio": 0.5245016773989524,
+    "retention_ratio_ci": [
+     0.03606800983815067,
+     0.9225656954016095
+    ],
+    "retention_slope": 1.1126681245178438,
+    "retention_slope_ci": [
+     0.3602928535098076,
+     2.2833693976125593
+    ],
+    "correlation": 0.6569983558679705
+   },
+   "40": {
+    "n_participants": 15,
+    "apparent_gain_pp": 4.044095693898953,
+    "retained_gain_pp": 1.9315725522495466,
+    "retention_ratio": 0.47762780568312874,
+    "retention_ratio_ci": [
+     0.09110184248446672,
+     0.822521717298286
+    ],
+    "retention_slope": 0.8477449575349192,
+    "retention_slope_ci": [
+     -0.3527347856865651,
+     2.1410768811180323
+    ],
+    "correlation": 0.47787074933649965
+   },
+   "80": {
+    "n_participants": 15,
+    "apparent_gain_pp": 6.21103612031211,
+    "retained_gain_pp": 2.200419659735958,
+    "retention_ratio": 0.3542757789702542,
+    "retention_ratio_ci": [
+     -0.04244073549123479,
+     0.6591036164216105
+    ],
+    "retention_slope": 1.2690933446724397,
+    "retention_slope_ci": [
+     0.3577538070421014,
+     1.8114483204272973
+    ],
+    "correlation": 0.7763554920642386
+   }
+  },
+  "cross_session/seedv/dgcnn": {
+   "10": {
+    "n_participants": 16,
+    "apparent_gain_pp": 1.782455394512954,
+    "retained_gain_pp": 0.010430248782522175,
+    "retention_ratio": 0.005851618399332894,
+    "retention_ratio_ci": [
+     -0.6717297279664695,
+     0.8550712600485475
+    ],
+    "retention_slope": -0.319591240832622,
+    "retention_slope_ci": [
+     -0.7802905747598535,
+     1.0898748619746723
+    ],
+    "correlation": -0.19034266699802843
+   },
+   "20": {
+    "n_participants": 16,
+    "apparent_gain_pp": 4.127610669567732,
+    "retained_gain_pp": -0.28834938742458,
+    "retention_ratio": -0.0698586689753803,
+    "retention_ratio_ci": [
+     -0.5424442099742985,
+     0.3664764434672246
+    ],
+    "retention_slope": 0.3716373213858437,
+    "retention_slope_ci": [
+     -0.6796002634393193,
+     1.4719973821387624
+    ],
+    "correlation": 0.21980328092150495
+   },
+   "40": {
+    "n_participants": 16,
+    "apparent_gain_pp": 6.364081397780624,
+    "retained_gain_pp": 1.437071807955209,
+    "retention_ratio": 0.22580977805475047,
+    "retention_ratio_ci": [
+     -0.05056776510073391,
+     0.4960571620737571
+    ],
+    "retention_slope": 0.17777312740887985,
+    "retention_slope_ci": [
+     -0.5014266200463928,
+     0.9709022542313714
+    ],
+    "correlation": 0.14905143399277324
+   },
+   "80": {
+    "n_participants": 16,
+    "apparent_gain_pp": 9.083146207455716,
+    "retained_gain_pp": 2.749926686086889,
+    "retention_ratio": 0.3027504592879577,
+    "retention_ratio_ci": [
+     0.09649506371545102,
+     0.5210872544896951
+    ],
+    "retention_slope": 0.23569442633896423,
+    "retention_slope_ci": [
+     -0.3372832203653481,
+     0.7648949252469839
+    ],
+    "correlation": 0.21087344510155773
+   }
+  },
+  "cross_session/seedv/mlp": {
+   "10": {
+    "n_participants": 16,
+    "apparent_gain_pp": 1.1245414713411264,
+    "retained_gain_pp": -0.26601131478458645,
+    "retention_ratio": -0.2365509156966366,
+    "retention_ratio_ci": [
+     -2.3709079148738756,
+     0.6174042678803
+    ],
+    "retention_slope": 1.025714270248941,
+    "retention_slope_ci": [
+     0.4463912163762704,
+     2.833126554828536
+    ],
+    "correlation": 0.6321420525389067
+   },
+   "20": {
+    "n_participants": 16,
+    "apparent_gain_pp": 2.2789868008788785,
+    "retained_gain_pp": -0.2682327194854421,
+    "retention_ratio": -0.11769823299634716,
+    "retention_ratio_ci": [
+     -1.616311446010713,
+     0.5464167255779403
+    ],
+    "retention_slope": 1.3182538200545986,
+    "retention_slope_ci": [
+     0.8740064257507096,
+     2.224494672807122
+    ],
+    "correlation": 0.7289973200785801
+   },
+   "40": {
+    "n_participants": 16,
+    "apparent_gain_pp": 3.581784499471173,
+    "retained_gain_pp": -0.6534717816416991,
+    "retention_ratio": -0.18244307599694504,
+    "retention_ratio_ci": [
+     -1.2303932481560298,
+     0.37549258797187673
+    ],
+    "retention_slope": 1.2003748428831902,
+    "retention_slope_ci": [
+     0.6859766561373225,
+     1.7941906639577354
+    ],
+    "correlation": 0.6935836668411786
+   },
+   "80": {
+    "n_participants": 16,
+    "apparent_gain_pp": 4.669504489960677,
+    "retained_gain_pp": 0.23050397937228706,
+    "retention_ratio": 0.04936369155825101,
+    "retention_ratio_ci": [
+     -0.4776137789847865,
+     0.40682186335332043
+    ],
+    "retention_slope": 0.5944640134728607,
+    "retention_slope_ci": [
+     0.06277867085707838,
+     1.0395367603402708
+    ],
+    "correlation": 0.5124859534363394
+   }
+  }
+ }
+}

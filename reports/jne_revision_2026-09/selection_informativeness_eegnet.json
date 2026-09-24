@@ -1,0 +1,149 @@
+{
+ "status": "EXPLORATORY - designed after the FACED results were known; no refitting",
+ "model": "eegnet",
+ "faced_version": "v1",
+ "faced_plan": "2026-09-18-jne-e1-faced.json",
+ "draws_per_size": 20,
+ "seed": {
+  "cells": 0,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": NaN,
+    "retained_pp": NaN,
+    "retained_ci_pp": [
+     NaN,
+     NaN
+    ],
+    "ratio": null,
+    "n_participants": 0
+   },
+   "2": {
+    "apparent_pp": NaN,
+    "retained_pp": NaN,
+    "retained_ci_pp": [
+     NaN,
+     NaN
+    ],
+    "ratio": null,
+    "n_participants": 0
+   },
+   "3": {
+    "apparent_pp": NaN,
+    "retained_pp": NaN,
+    "retained_ci_pp": [
+     NaN,
+     NaN
+    ],
+    "ratio": null,
+    "n_participants": 0
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": NaN,
+    "retained_pp": NaN,
+    "retained_ci_pp": [
+     NaN,
+     NaN
+    ],
+    "ratio": null,
+    "n_participants": 0,
+    "n_calibration_clips": 3
+   },
+   "2": {
+    "apparent_pp": NaN,
+    "retained_pp": NaN,
+    "retained_ci_pp": [
+     NaN,
+     NaN
+    ],
+    "ratio": null,
+    "n_participants": 0,
+    "n_calibration_clips": 6
+   }
+  }
+ },
+ "budgets": [
+  5,
+  80
+ ],
+ "faced": {
+  "cells": 3,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": 0.49206349206349254,
+    "retained_pp": -0.316865079365079,
+    "retained_ci_pp": [
+     -0.3945027281746028,
+     -0.24508804563492023
+    ],
+    "ratio": -0.6439516129032246,
+    "n_participants": 40
+   },
+   "3": {
+    "apparent_pp": 0.20767195767195812,
+    "retained_pp": -0.027529761904761654,
+    "retained_ci_pp": [
+     -0.11423611111111083,
+     0.047273065476190694
+    ],
+    "ratio": -0.1325636942675144,
+    "n_participants": 40
+   },
+   "6": {
+    "apparent_pp": 0.13690476190476214,
+    "retained_pp": 0.005059523809524099,
+    "retained_ci_pp": [
+     -0.0819977678571426,
+     0.0921664186507939
+    ],
+    "ratio": 0.03695652173913248,
+    "n_participants": 40
+   },
+   "12": {
+    "apparent_pp": 0.05439814814814815,
+    "retained_pp": 0.03387896825396847,
+    "retained_ci_pp": [
+     -0.022023809523809296,
+     0.09082589285714308
+    ],
+    "ratio": 0.6227963525835907,
+    "n_participants": 40
+   },
+   "23": {
+    "apparent_pp": 0.012077294685990576,
+    "retained_pp": 0.026785714285714277,
+    "retained_ci_pp": [
+     -0.001984126984126977,
+     0.07638888888888887
+    ],
+    "ratio": 2.217857142857098,
+    "n_participants": 40
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": 1.4753086419753088,
+    "retained_pp": -1.1083333333333338,
+    "retained_ci_pp": [
+     -1.9695138888888895,
+     -0.23333333333333375
+    ],
+    "ratio": -0.7512552301255233,
+    "n_participants": 40,
+    "n_calibration_clips": 9
+   },
+   "2": {
+    "apparent_pp": 1.2052469135802468,
+    "retained_pp": -0.4750000000000003,
+    "retained_ci_pp": [
+     -1.275069444444445,
+     0.39444444444444404
+    ],
+    "ratio": -0.3941101152368761,
+    "n_participants": 40,
+    "n_calibration_clips": 18
+   }
+  }
+ }
+}

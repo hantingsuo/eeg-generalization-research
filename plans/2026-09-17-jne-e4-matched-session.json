@@ -1,0 +1,265 @@
+{
+  "protocol_id": "jne_e4_matched_session_v1",
+  "design_status": "Frozen 2026-09-17 before any E4 outcome, after rotation_v2 and v4 results were known and while E1 was running (no E1 outcome inspected). Explanatory control, not confirmation.",
+  "question": "With trajectory, training amount, pool sizes, film clips and normalisation held fixed, does scoring A/B in another session change apparent and retained checkpoint-search gains?",
+  "inputs_sha256": {
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p01.npz": "9b15552d91cde716a39d7bb21bcaad8ee3077b5563f3d01ef04078e84884bd12",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p01.npz": "53a5ecb0badfac38eb090484df4d21ce933058df541b4ee840f9c889e3607edc",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p01.npz": "8a981335cf81d8f8bac07fdd33bc259b27ef13b5bfd868d82151b210e7513099",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p02.npz": "7463a4d535d819f11091ae228b098e60eba391adb292619f863e7bbdbf5c5c4e",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p02.npz": "610bdc9065c45576aa7b82f43ab9e374c1035125ff2ad2bfd20b3419c2b84179",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p02.npz": "b383674616c3894fede75afb60c3970485d8e704be1e1d54a4c92d995e18dc3f",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p03.npz": "e9fd42950d0153778a14e65aa9ef16beebb05d31e0a7aa81b85e916258501421",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p03.npz": "aba683a2b1867c80e12257e720399c56810ffcba1ba21271bf22c1bf26f6d2c3",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p03.npz": "7c94bb819173f6b5333d66d3f78554f20e13a7167edf37ebe88814229e51af06",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p04.npz": "f3dedf6bbd5807ebf0b98ad26f92ce7f0900a0df7a0ce849b54aa0ae8693f5f4",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p04.npz": "1978226e93f121334680e873d937788b1a4989ef61f38d68a6f521e9aeedc6aa",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p04.npz": "04d06ee51b8b9fb3dea31a3b3d77d9c240141191c6997a524b8458d66f85410d",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p05.npz": "15b389b71617257a573ebac1bf95bdf3c30f259e7977e7c6a534ec991f0d0af4",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p05.npz": "70f8e1f0b0ad7bc8f394d66d53a9e6dacdab86852a1d7a7747a05422302ba7bd",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p05.npz": "2649012161d2f9a6c4a8837fd8d65bec82f56da52bf7e633e2d04e2a061c11e3",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p06.npz": "67165468e10eacb430b726451bb1662c964e674746c19846f335adbb8d17845c",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p06.npz": "d2fffd0d17b1c24fc976bd91ecb43e4d81e99c99eeb10bf1d1a2efc2822cd127",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p06.npz": "6a1622c7848edee2a2ef05f9c0c46c35308415364de1886a5187b151fc1afe1c",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p07.npz": "14c7b104efce794e6dad320d25e1587d95889c4ee40916642c0e11814d6566e5",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p07.npz": "459f61fc6d2f2a6dbbaeb397e283e15d947737aa8f59851f6d524549957c6a72",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p07.npz": "8321b2fe01e2b03fc2854128424b7326c2613c6e5c5d3b21be1ed4e203a04ce2",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p08.npz": "ae85f915d1d67a777cb1fb3135bba220a746cd54103b0b26201c87b2e2f5b21f",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p08.npz": "36d40912375c8ac023f7bc408254ad4f69a9805b2c1d06202d11b9a8fbc88f77",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p08.npz": "477a71149d31475b983243536959df2420b18ca20ef43c5eb8dee27474a2efe4",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p09.npz": "8f175fbd6b800710987798b93b04f1b55495d64e70ce6e4f492215752d225a15",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p09.npz": "185a107c84739096cfbd9248763abbec75fcee3bf884c03a481dee6584dd0285",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p09.npz": "987c231566fb33340796fa99031d9803513f218946a3c18236e5e14f67b2d00c",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p10.npz": "7625f19b0d89a408e46b71c622c9d7adbdcaa7825c0cd38359df28e767e311dc",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p10.npz": "2b72d6b8d79e221d3a5161c1ff3548b7752577dc299bf21a7a2ad3d3e53c4b47",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p10.npz": "4f3c0c4744bf19d03ae7a2763b2ecf27badece94cf09932d39af5150debbfabe",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p11.npz": "d18be0eb9a3aeffea9f731fa880bbf900c5296cdf75a1f64b7616f048ee46ef5",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p11.npz": "90db5bdba56d4b4092e90af8780deb48a5ed85f158f2ef01ccd547a6b9385009",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p11.npz": "b627de821343d4e2a9afe5f628abb6d398f31a54abef62ffb4dfe5e3fbbed7d3",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p12.npz": "e577ed3a7b18bc4e2d7b9046c64c1320156edd451342aa45d9112472c0caba27",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p12.npz": "1fdea6cca177b050ac67030edbbeeda2b79281133156aa1370bae59cb82228c1",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p12.npz": "94d28e6879cfb8eb644b5e2b4c98fa5e9d45973df4e659c97b3006513fdfb685",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p13.npz": "617419c063c21b9fc48624e0574b11fb6a7ab11c12f0939becaa83bc09f924fb",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p13.npz": "f2ad8f8a1765edbe3a48c85532f2f152b6361d5422892b8d29250628e757d8f1",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p13.npz": "36614da08cdb71d4c2c63562ca7cae6379180a7e18bbd075a3d08b07204ab520",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p14.npz": "73e598673e10944ad20c045b650e6fbf08c110f0f283bab8c74f230fda57bb90",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p14.npz": "2d1ae485617b8f04edc148bd6741cdd0a250f3a427ab97af9b3b651e67282c6a",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p14.npz": "b54c8c61a7f75034b6221bb6f2764733135b0e5066e4d6d23dda53d23df2a455",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p15.npz": "138ae9516d34283d68d49760fa3fd833dc560024fe61d719f78a447d59c245d2",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s2_p15.npz": "8ffcaab3d819bbc6fa7f5c78ef8253ab14e2acf54ea8bad0bdd21248be7712d7",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s3_p15.npz": "20070735c95bfe7c86b6f3cf75a7fef69aff0a33d4500357eabb70db841799a7"
+  },
+  "rotations": [
+    {
+      "train": [
+        1,
+        4,
+        6,
+        8,
+        11,
+        15
+      ],
+      "validation": [
+        2,
+        12,
+        14
+      ],
+      "A": [
+        3,
+        5,
+        10
+      ],
+      "B": [
+        7,
+        9,
+        13
+      ]
+    },
+    {
+      "train": [
+        2,
+        6,
+        8,
+        12,
+        14,
+        15
+      ],
+      "validation": [
+        3,
+        5,
+        10
+      ],
+      "A": [
+        7,
+        9,
+        13
+      ],
+      "B": [
+        1,
+        4,
+        11
+      ]
+    },
+    {
+      "train": [
+        2,
+        3,
+        5,
+        10,
+        12,
+        14
+      ],
+      "validation": [
+        7,
+        9,
+        13
+      ],
+      "A": [
+        1,
+        4,
+        11
+      ],
+      "B": [
+        6,
+        8,
+        15
+      ]
+    },
+    {
+      "train": [
+        3,
+        5,
+        7,
+        9,
+        10,
+        13
+      ],
+      "validation": [
+        1,
+        4,
+        11
+      ],
+      "A": [
+        6,
+        8,
+        15
+      ],
+      "B": [
+        2,
+        12,
+        14
+      ]
+    },
+    {
+      "train": [
+        1,
+        4,
+        7,
+        9,
+        11,
+        13
+      ],
+      "validation": [
+        6,
+        8,
+        15
+      ],
+      "A": [
+        2,
+        12,
+        14
+      ],
+      "B": [
+        3,
+        5,
+        10
+      ]
+    }
+  ],
+  "rotation_source": "plans/2026-09-10-selection-rotation-v2.json (identical trial roles in every participant and session)",
+  "training_sessions": [
+    1,
+    2
+  ],
+  "audit_sessions": [
+    1,
+    2,
+    3
+  ],
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "models": [
+    "dgcnn",
+    "mlp"
+  ],
+  "optimization_seeds": [
+    2024,
+    2025,
+    2026
+  ],
+  "training": {
+    "epochs": 80,
+    "batch_size": 64,
+    "evaluation_batch_size": 512,
+    "learning_rate": 0.0015,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "adam_epsilon": 0.0001,
+    "dgcnn_regularizer": 0.01,
+    "mlp": {
+      "hidden": [
+        128,
+        64
+      ],
+      "activation": "ReLU",
+      "dropout": 0.5,
+      "extra_regularizer": 0.0
+    }
+  },
+  "vendor_root": "output/revision_2026-09-10/vendor/libeer_39dc27e/LibEER",
+  "dgcnn_source_sha256": "020e369d54676e78bc3ef42df2fa76d65eb85140f566c22857fd2c6c65b0577d",
+  "dgcnn_config_sha256": "0e54afb0986eade332316449217d07acb6af04b6383490228d8a6c05230f0d4a",
+  "normalization": "per-feature mean/std from the six training trials; std floor 1e-6; both models",
+  "budgets": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    80
+  ],
+  "selection_metric": "window accuracy; earliest maximum; validation = session-s validation trials",
+  "relations": {
+    "same": "A and B from training session s (rotation_v2 relation)",
+    "cross": "A and B from each other session q != s (same trial IDs = same film clips); the two cross sessions are averaged within cell"
+  },
+  "quantities": "S_K = mean of own-pool selected scores; C_K = mean of exchanged-pool scores (rotation_v2 definition), per relation",
+  "primary_endpoints": [
+    "(C80 - C5)_cross - (C80 - C5)_same, paired within participant",
+    "(S80 - S5)_cross - (S80 - S5)_same, paired within participant"
+  ],
+  "secondary": [
+    "each relation's S80-S5, C80-C5 and retention ratio/slope",
+    "DGCNN standardisation effect: E4 same-relation DGCNN vs rotation_v2 DGCNN (seed 2024)",
+    "reproduction check: E4 same-relation MLP seed 2024 vs rotation_v2 MLP, per cell",
+    "seed dispersion"
+  ],
+  "aggregation": "average rotations, training sessions and seeds within participant; n=15; participant bootstrap 10000 seed 20260917; exact sign-flip + Holm over the two primary endpoints per model",
+  "cells": "5 rotations x 2 models x 2 training sessions x 15 participants x 3 seeds = 900; all retained",
+  "boundary": "Validation remains in the training session for both relations, unlike v4. Pools are three trials; sessions differ in recording day and state, not in stimuli. Session labels in SEED are not counterbalanced orders. Explains, does not prove, the source of same/cross differences."
+}
