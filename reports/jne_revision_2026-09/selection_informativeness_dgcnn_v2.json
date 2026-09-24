@@ -1,0 +1,149 @@
+{
+ "status": "EXPLORATORY - designed after the FACED results were known; no refitting",
+ "model": "dgcnn",
+ "faced_version": "v2",
+ "faced_plan": "2026-09-20-jne-e1-faced-v2.json",
+ "draws_per_size": 20,
+ "seed": {
+  "cells": 15,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": 8.511392653702611,
+    "retained_pp": 0.8270477312905135,
+    "retained_ci_pp": [
+     -0.7661363189943032,
+     2.3017146271197553
+    ],
+    "ratio": 0.09716949563250764,
+    "n_participants": 15
+   },
+   "2": {
+    "apparent_pp": 7.473875466509526,
+    "retained_pp": 1.5838735022588888,
+    "retained_ci_pp": [
+     -0.6522858966804147,
+     3.7484269626137636
+    ],
+    "ratio": 0.21192131302645248,
+    "n_participants": 15
+   },
+   "3": {
+    "apparent_pp": 6.628691154324623,
+    "retained_pp": -0.033392260852483965,
+    "retained_ci_pp": [
+     -2.1135991619197254,
+     2.0894225103123136
+    ],
+    "ratio": -0.005037534571315565,
+    "n_participants": 15
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": 7.710712343665034,
+    "retained_pp": 3.1032467187416968,
+    "retained_ci_pp": [
+     0.6121472979435678,
+     5.399968117328228
+    ],
+    "ratio": 0.40245914779731884,
+    "n_participants": 15,
+    "n_calibration_clips": 3
+   },
+   "2": {
+    "apparent_pp": 6.545578579346806,
+    "retained_pp": 4.033157978638609,
+    "retained_ci_pp": [
+     0.8639938360167906,
+     7.28840533503374
+    ],
+    "ratio": 0.6161652373045203,
+    "n_participants": 15,
+    "n_calibration_clips": 6
+   }
+  }
+ },
+ "budgets": [
+  5,
+  80
+ ],
+ "faced": {
+  "cells": 3,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": 1.7976190476190474,
+    "retained_pp": -0.16711309523809523,
+    "retained_ci_pp": [
+     -0.32346726190476194,
+     -0.02142361111111123
+    ],
+    "ratio": -0.0929635761589404,
+    "n_participants": 40
+   },
+   "3": {
+    "apparent_pp": 1.1064814814814812,
+    "retained_pp": -0.10342261904761912,
+    "retained_ci_pp": [
+     -0.24812003968253973,
+     0.04375124007936489
+    ],
+    "ratio": -0.09346981470412442,
+    "n_participants": 40
+   },
+   "6": {
+    "apparent_pp": 0.8138227513227514,
+    "retained_pp": -0.23933531746031755,
+    "retained_ci_pp": [
+     -0.4585329861111112,
+     -0.01959325396825395
+    ],
+    "ratio": -0.2940877691995125,
+    "n_participants": 40
+   },
+   "12": {
+    "apparent_pp": 0.5305886243386243,
+    "retained_pp": -0.21502976190476197,
+    "retained_ci_pp": [
+     -0.4074466765873015,
+     -0.019575892857143038
+    ],
+    "ratio": -0.4052664381427238,
+    "n_participants": 40
+   },
+   "23": {
+    "apparent_pp": 0.35024154589372114,
+    "retained_pp": -0.004960317460317512,
+    "retained_ci_pp": [
+     -0.3581845238095239,
+     0.37797619047619047
+    ],
+    "ratio": -0.014162561576354772,
+    "n_participants": 40
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": 3.3919753086419755,
+    "retained_pp": 0.4472222222222222,
+    "retained_ci_pp": [
+     -0.20562500000000017,
+     1.0999999999999999
+    ],
+    "ratio": 0.13184713375796175,
+    "n_participants": 40,
+    "n_calibration_clips": 9
+   },
+   "2": {
+    "apparent_pp": 2.5077160493827155,
+    "retained_pp": 0.2527777777777777,
+    "retained_ci_pp": [
+     -0.3250694444444447,
+     0.8527777777777776
+    ],
+    "ratio": 0.1008,
+    "n_participants": 40,
+    "n_calibration_clips": 18
+   }
+  }
+ }
+}

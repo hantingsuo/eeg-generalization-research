@@ -1,0 +1,278 @@
+{
+  "trial_labels": [
+    2,
+    1,
+    0,
+    0,
+    1,
+    2,
+    0,
+    1,
+    2,
+    2,
+    1,
+    0,
+    1,
+    2,
+    0
+  ],
+  "folds": [
+    {
+      "train": [
+        15,
+        11,
+        7,
+        4,
+        5,
+        10,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        14,
+        13,
+        2
+      ],
+      "test": [
+        9,
+        1,
+        6
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        4,
+        5,
+        10,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        15,
+        11,
+        7
+      ],
+      "test": [
+        14,
+        13,
+        2
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        14,
+        13,
+        2,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        4,
+        5,
+        10
+      ],
+      "test": [
+        15,
+        11,
+        7
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        14,
+        13,
+        2,
+        15,
+        11,
+        7
+      ],
+      "validation": [
+        12,
+        3,
+        8
+      ],
+      "test": [
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "train": [
+        14,
+        13,
+        2,
+        15,
+        11,
+        7,
+        4,
+        5,
+        10
+      ],
+      "validation": [
+        9,
+        1,
+        6
+      ],
+      "test": [
+        12,
+        3,
+        8
+      ]
+    }
+  ],
+  "fold_source": "results/strict_fivefold/seed/seed_fold{1..5}_opt2024.json split_one_based (partition seed 2024)",
+  "budgets": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    80
+  ],
+  "candidate_rule": "nested grid 80/K, 2(80/K), ..., 80 (same as rotation_v2 and v4)",
+  "selection_metric": "window accuracy",
+  "tie_rule": "earliest maximum",
+  "calibration": {
+    "seed": 20260917,
+    "class_trial_permutations": {
+      "0": [
+        12,
+        7,
+        3,
+        15,
+        4
+      ],
+      "1": [
+        5,
+        8,
+        13,
+        11,
+        2
+      ],
+      "2": [
+        6,
+        10,
+        14,
+        9,
+        1
+      ]
+    },
+    "primary_k": 1,
+    "rotations": 5,
+    "rule": "rotation r: C = perms[c][r] for each class c; B = remaining target trials",
+    "secondary_k": 2,
+    "secondary_rule": "rotation r: C = perms[c][r], perms[c][(r+1)%5]; B = remaining (B differs from k=1; reported separately)"
+  },
+  "policies": {
+    "U_K": "select on pooled validation-participant windows; score on target B (zero target labels)",
+    "A_K": "select on target C windows; score on target B (calibration labels, no weight update)",
+    "O_K": "select on target B; score on B. Diagnostic only, computed after U/A are exported",
+    "F": "epoch 80; score on B"
+  },
+  "primary_endpoints": [
+    "zero-label retained change U_80 - U_5 on B",
+    "calibration retained change A_80 - A_5 on B",
+    "A_80 - U_80 on B"
+  ],
+  "retention_definitions": {
+    "zero_label": "apparent = a_V(h_V(80)) - a_V(h_V(5)); retained = a_B(h_V(80)) - a_B(h_V(5))",
+    "calibration": "apparent = a_C(h_C(80)) - a_C(h_C(5)); retained = a_B(h_C(80)) - a_B(h_C(5))",
+    "summary": "aggregate ratio mean(retained)/mean(apparent) and OLS slope over participants, as in experiments/jne_retention_curve.py"
+  },
+  "aggregation": "average over 3 seeds and 5 calibration rotations within participant; n=15 participants; participant bootstrap 10000, seed 20260917",
+  "optimization_seeds": [
+    2024,
+    2025,
+    2026
+  ],
+  "protocol_id": "jne_e2_eegnet_seed_v1",
+  "design_status": "Frozen 2026-09-17 before any EEGNet outcome; E1 DGCNN/MLP were still running and no E1 outcome had been inspected. Design copied from the E1 plan.",
+  "e1_plan_sha256": "e8b1eb45c923a663543b33ec36cb6a8c15703ff1b834e3fbcb3941497557636f",
+  "models": [
+    "eegnet"
+  ],
+  "model": {
+    "name": "EEGNet-8,2",
+    "reference": "Lawhern et al. 2018 J Neural Eng 15:056013; arl-eegmodels (CC0)",
+    "F1": 8,
+    "D": 2,
+    "F2": 16,
+    "kern_length": 100,
+    "separable_kernel": 16,
+    "dropout": 0.5,
+    "depthwise_max_norm": 1.0,
+    "dense_max_norm": 0.25,
+    "batchnorm": {
+      "momentum_torch": 0.01,
+      "eps": 0.001
+    }
+  },
+  "input": "SEED Preprocessed_EEG session 1, 62 channels, 200 Hz, non-overlapping 1-s windows aligned 1:1 with DE/LDS windows",
+  "inputs_sha256": {
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p01.npy": "611665b424d422a727c67c8e1bcd69cafc5c21e21ad90af2b80c3fa0197b4070",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p01_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p02.npy": "d2238b5f0885c51e6c41b17ccead0af58e21ce84fd976dbb3846860d1eea51dd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p02_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p03.npy": "ec645924024205e8e09f4929b1220062d437d6b7c7ff792652bea2f55318b3dc",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p03_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p04.npy": "ec3172e7d5af54fa26ecfb51fa9ea80af1a50d6663fbe0eb18fa13d79d44aea5",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p04_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p05.npy": "c3411de630e0928c1d5581542efdbb5312614fda58ef78123268995c2deac6ad",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p05_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p06.npy": "73978050a7720ff78e9414b7598601118608b572cb6f014c4bdb82c77767df57",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p06_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p07.npy": "e24419b31407a3ab36eefeff0469bd27071f7b61669b9341b49509cbcaf7a669",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p07_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p08.npy": "5cf954155151a046467ca2ed1eb9ac773a844b79d02d29e270c85112242aaae4",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p08_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p09.npy": "4f18dcde54a97776f4c17e255a4aa19c519396c7cad1a41e1b935d3ae5b83497",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p09_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p10.npy": "82604fed48f06d73b76a5e244780b9bc09f836b22b49470191bca3de2366472b",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p10_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p11.npy": "9bcbb7fd3097c25dd2ef7d385bc77cce4b3634e7a3110fa5fe0be0cf4988d2f1",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p11_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p12.npy": "fb83f2b37ef0355b35adbfd3eb73e4285edb2788aa1d5601faaa70c53d84ec7a",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p12_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p13.npy": "06c540a798fb3530619655fac8dcb9d3739466316bd56fe63b41d14f426a9f61",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p13_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p14.npy": "f84289a568557cbcd392cb21c70fc9bcd59fec8bc04d39ca53d543043451fc03",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p14_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p15.npy": "fe0b9a7457cf5a59295ad09b7dc249bfa2f3c16cf41ae7a3db7f3a57ca3dca62",
+    "results/jne_revision_2026-09/e2_eegnet_seed/cache/p15_index.npz": "7f505803abfe12bb2360b58d4d39c2d1feeec49accce5d7abf5293c922266ffd"
+  },
+  "normalization": "per-channel mean/std over all training-participant samples; std floor 1e-6",
+  "training": {
+    "epochs": 80,
+    "batch_size": 64,
+    "evaluation_batch_size": 512,
+    "learning_rate": 0.0015,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "adam_epsilon": 0.0001,
+    "dgcnn_regularizer": 0.01,
+    "mlp": {
+      "hidden": [
+        128,
+        64
+      ],
+      "activation": "ReLU",
+      "dropout": 0.5,
+      "extra_regularizer": 0.0
+    }
+  },
+  "training_note": "same optimiser recipe as E1 (AdamW lr 0.0015, batch 64, 80 epochs), not EEGNet paper defaults, so the three models share one recipe",
+  "boundary": "Upstream down-sampling/filtering of the released preprocessed signal were not reconstructed. Same films for all participants. Differences from DGCNN/MLP combine input route and architecture. Released signals contain large-amplitude artefacts (per-participant |x| max 938 to 215,353 in release units, see cache/prepare_meta.json); no clipping or artefact rejection is applied, because any such rule chosen now would be an unregistered analysis choice."
+}

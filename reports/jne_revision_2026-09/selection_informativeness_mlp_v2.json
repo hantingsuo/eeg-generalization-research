@@ -1,0 +1,149 @@
+{
+ "status": "EXPLORATORY - designed after the FACED results were known; no refitting",
+ "model": "mlp",
+ "faced_version": "v2",
+ "faced_plan": "2026-09-20-jne-e1-faced-v2.json",
+ "draws_per_size": 20,
+ "seed": {
+  "cells": 15,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": 4.703791003732076,
+    "retained_pp": 0.4986250245531329,
+    "retained_ci_pp": [
+     -1.133645976559942,
+     1.9205468801152352
+    ],
+    "ratio": 0.1060049275483359,
+    "n_participants": 15
+   },
+   "2": {
+    "apparent_pp": 3.8513062266745237,
+    "retained_pp": 0.14325934655928751,
+    "retained_ci_pp": [
+     -1.1473498985137172,
+     1.2434917828848289
+    ],
+    "ratio": 0.037197599496778325,
+    "n_participants": 15
+   },
+   "3": {
+    "apparent_pp": 3.2901198192889405,
+    "retained_pp": 0.2887448438420735,
+    "retained_ci_pp": [
+     -1.4962188175211157,
+     1.9354579977738489
+    ],
+    "ratio": 0.08776119402985054,
+    "n_participants": 15
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": 5.510241073046946,
+    "retained_pp": -0.5048089696583246,
+    "retained_ci_pp": [
+     -3.0917423880121153,
+     1.7079281577129475
+    ],
+    "ratio": -0.09161286465805843,
+    "n_participants": 15,
+    "n_calibration_clips": 3
+   },
+   "2": {
+    "apparent_pp": 4.928796793723885,
+    "retained_pp": 1.4432222753600077,
+    "retained_ci_pp": [
+     -0.14777618364419004,
+     2.9608374515117686
+    ],
+    "ratio": 0.29281431873956415,
+    "n_participants": 15,
+    "n_calibration_clips": 6
+   }
+  }
+ },
+ "budgets": [
+  5,
+  80
+ ],
+ "faced": {
+  "cells": 3,
+  "validation_pool": {
+   "1": {
+    "apparent_pp": 2.359126984126984,
+    "retained_pp": 0.06746031746031747,
+    "retained_ci_pp": [
+     -0.2158804563492064,
+     0.34643229166666667
+    ],
+    "ratio": 0.02859545836837679,
+    "n_participants": 40
+   },
+   "3": {
+    "apparent_pp": 1.671957671957672,
+    "retained_pp": 0.043849206349206304,
+    "retained_ci_pp": [
+     -0.3385615079365079,
+     0.41037078373015873
+    ],
+    "ratio": 0.02622626582278478,
+    "n_participants": 40
+   },
+   "6": {
+    "apparent_pp": 1.2774470899470902,
+    "retained_pp": -0.004811507936507966,
+    "retained_ci_pp": [
+     -0.3318477182539683,
+     0.3197061011904759
+    ],
+    "ratio": -0.003766502718094768,
+    "n_participants": 40
+   },
+   "12": {
+    "apparent_pp": 1.0696097883597888,
+    "retained_pp": -0.08948412698412701,
+    "retained_ci_pp": [
+     -0.5229774305555559,
+     0.3342311507936506
+    ],
+    "ratio": -0.0836605348585562,
+    "n_participants": 40
+   },
+   "23": {
+    "apparent_pp": 0.8143547273982051,
+    "retained_pp": -0.3869047619047619,
+    "retained_ci_pp": [
+     -0.9633184523809525,
+     0.18650793650793612
+    ],
+    "ratio": -0.47510593220339015,
+    "n_participants": 40
+   }
+  },
+  "calibration": {
+   "1": {
+    "apparent_pp": 2.7808641975308643,
+    "retained_pp": 0.1499999999999999,
+    "retained_ci_pp": [
+     -0.29722222222222233,
+     0.6194444444444442
+    ],
+    "ratio": 0.05394006659267477,
+    "n_participants": 40,
+    "n_calibration_clips": 9
+   },
+   "2": {
+    "apparent_pp": 2.0586419753086416,
+    "retained_pp": 0.030555555555555513,
+    "retained_ci_pp": [
+     -0.5166666666666668,
+     0.6277777777777778
+    ],
+    "ratio": 0.014842578710644658,
+    "n_participants": 40,
+    "n_calibration_clips": 18
+   }
+  }
+ }
+}

@@ -1,0 +1,259 @@
+{
+  "protocol_id": "jne_e1_seed_cross_subject_v1",
+  "design_status": "Frozen 2026-09-17 before any E1 model outcome. SEED session 1 and the strict five-fold participant partition were used in earlier work (historical exposure); this is a protocol extension, not independent confirmation.",
+  "dataset": "SEED official 1-second DE/LDS, session 1, 15 participants, 15 trials each",
+  "inputs_sha256": {
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p01.npz": "9b15552d91cde716a39d7bb21bcaad8ee3077b5563f3d01ef04078e84884bd12",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p02.npz": "7463a4d535d819f11091ae228b098e60eba391adb292619f863e7bbdbf5c5c4e",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p03.npz": "e9fd42950d0153778a14e65aa9ef16beebb05d31e0a7aa81b85e916258501421",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p04.npz": "f3dedf6bbd5807ebf0b98ad26f92ce7f0900a0df7a0ce849b54aa0ae8693f5f4",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p05.npz": "15b389b71617257a573ebac1bf95bdf3c30f259e7977e7c6a534ec991f0d0af4",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p06.npz": "67165468e10eacb430b726451bb1662c964e674746c19846f335adbb8d17845c",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p07.npz": "14c7b104efce794e6dad320d25e1587d95889c4ee40916642c0e11814d6566e5",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p08.npz": "ae85f915d1d67a777cb1fb3135bba220a746cd54103b0b26201c87b2e2f5b21f",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p09.npz": "8f175fbd6b800710987798b93b04f1b55495d64e70ce6e4f492215752d225a15",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p10.npz": "7625f19b0d89a408e46b71c622c9d7adbdcaa7825c0cd38359df28e767e311dc",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p11.npz": "d18be0eb9a3aeffea9f731fa880bbf900c5296cdf75a1f64b7616f048ee46ef5",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p12.npz": "e577ed3a7b18bc4e2d7b9046c64c1320156edd451342aa45d9112472c0caba27",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p13.npz": "617419c063c21b9fc48624e0574b11fb6a7ab11c12f0939becaa83bc09f924fb",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p14.npz": "73e598673e10944ad20c045b650e6fbf08c110f0f283bab8c74f230fda57bb90",
+    "results/revision_2026-09-11/seed_family_extension_v4/cache/seed_s1_p15.npz": "138ae9516d34283d68d49760fa3fd833dc560024fe61d719f78a447d59c245d2"
+  },
+  "trial_labels": [
+    2,
+    1,
+    0,
+    0,
+    1,
+    2,
+    0,
+    1,
+    2,
+    2,
+    1,
+    0,
+    1,
+    2,
+    0
+  ],
+  "folds": [
+    {
+      "train": [
+        15,
+        11,
+        7,
+        4,
+        5,
+        10,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        14,
+        13,
+        2
+      ],
+      "test": [
+        9,
+        1,
+        6
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        4,
+        5,
+        10,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        15,
+        11,
+        7
+      ],
+      "test": [
+        14,
+        13,
+        2
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        14,
+        13,
+        2,
+        12,
+        3,
+        8
+      ],
+      "validation": [
+        4,
+        5,
+        10
+      ],
+      "test": [
+        15,
+        11,
+        7
+      ]
+    },
+    {
+      "train": [
+        9,
+        1,
+        6,
+        14,
+        13,
+        2,
+        15,
+        11,
+        7
+      ],
+      "validation": [
+        12,
+        3,
+        8
+      ],
+      "test": [
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "train": [
+        14,
+        13,
+        2,
+        15,
+        11,
+        7,
+        4,
+        5,
+        10
+      ],
+      "validation": [
+        9,
+        1,
+        6
+      ],
+      "test": [
+        12,
+        3,
+        8
+      ]
+    }
+  ],
+  "fold_source": "results/strict_fivefold/seed/seed_fold{1..5}_opt2024.json split_one_based (partition seed 2024)",
+  "models": [
+    "dgcnn",
+    "mlp"
+  ],
+  "optimization_seeds": [
+    2024,
+    2025,
+    2026
+  ],
+  "training": {
+    "epochs": 80,
+    "batch_size": 64,
+    "evaluation_batch_size": 512,
+    "learning_rate": 0.0015,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "adam_epsilon": 0.0001,
+    "dgcnn_regularizer": 0.01,
+    "mlp": {
+      "hidden": [
+        128,
+        64
+      ],
+      "activation": "ReLU",
+      "dropout": 0.5,
+      "extra_regularizer": 0.0
+    }
+  },
+  "training_source": "identical to v4 cross-session study (plans/2026-09-11-seed-family-extension-v4.json)",
+  "vendor_root": "output/revision_2026-09-10/vendor/libeer_39dc27e/LibEER",
+  "dgcnn_source_sha256": "020e369d54676e78bc3ef42df2fa76d65eb85140f566c22857fd2c6c65b0577d",
+  "dgcnn_config_sha256": "0e54afb0986eade332316449217d07acb6af04b6383490228d8a6c05230f0d4a",
+  "normalization": "per-feature mean/std from training participants' windows only; std floor 1e-6; both models",
+  "budgets": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    80
+  ],
+  "candidate_rule": "nested grid 80/K, 2(80/K), ..., 80 (same as rotation_v2 and v4)",
+  "selection_metric": "window accuracy",
+  "tie_rule": "earliest maximum",
+  "calibration": {
+    "seed": 20260917,
+    "class_trial_permutations": {
+      "0": [
+        12,
+        7,
+        3,
+        15,
+        4
+      ],
+      "1": [
+        5,
+        8,
+        13,
+        11,
+        2
+      ],
+      "2": [
+        6,
+        10,
+        14,
+        9,
+        1
+      ]
+    },
+    "primary_k": 1,
+    "rotations": 5,
+    "rule": "rotation r: C = perms[c][r] for each class c; B = remaining target trials",
+    "secondary_k": 2,
+    "secondary_rule": "rotation r: C = perms[c][r], perms[c][(r+1)%5]; B = remaining (B differs from k=1; reported separately)"
+  },
+  "policies": {
+    "U_K": "select on pooled validation-participant windows; score on target B (zero target labels)",
+    "A_K": "select on target C windows; score on target B (calibration labels, no weight update)",
+    "O_K": "select on target B; score on B. Diagnostic only, computed after U/A are exported",
+    "F": "epoch 80; score on B"
+  },
+  "primary_endpoints": [
+    "zero-label retained change U_80 - U_5 on B",
+    "calibration retained change A_80 - A_5 on B",
+    "A_80 - U_80 on B"
+  ],
+  "retention_definitions": {
+    "zero_label": "apparent = a_V(h_V(80)) - a_V(h_V(5)); retained = a_B(h_V(80)) - a_B(h_V(5))",
+    "calibration": "apparent = a_C(h_C(80)) - a_C(h_C(5)); retained = a_B(h_C(80)) - a_B(h_C(5))",
+    "summary": "aggregate ratio mean(retained)/mean(apparent) and OLS slope over participants, as in experiments/jne_retention_curve.py"
+  },
+  "aggregation": "average over 3 seeds and 5 calibration rotations within participant; n=15 participants; participant bootstrap 10000, seed 20260917",
+  "secondary": [
+    "balanced window accuracy",
+    "trial-level accuracy",
+    "k=2 calibration",
+    "MLP",
+    "seed dispersion"
+  ],
+  "pilot": "fold1/dgcnn/seed2024 first; gate only finite loss, shapes, label validity; included unchanged; low accuracy is not an exclusion or tuning trigger",
+  "stopping": "all 30 cells retained; no significance-dependent expansion or tuning",
+  "boundary": "Released features with upstream LDS smoothing; every participant watched the same 15 films, so participant hold-out is not stimulus hold-out. Session 1 only. No temporal-input model in this anchor."
+}
