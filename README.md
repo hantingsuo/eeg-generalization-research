@@ -12,6 +12,8 @@ The repository studies how subject partitioning, checkpoint selection, admissibl
 - `supplementary/ESM_2.json`: the final machine-readable CF-TRE parameters and mixture weights submitted as Online Resource 2.
 - `docs/`: the public evidence boundary, data policy, and reproduction guidance.
 
+**2026 revision.** The analyses added for the Journal of Neural Engineering submission (participant hold-outs with and without target calibration labels, the matched-session control, EEGNet, the FACED external dataset with a stimulus hold-out, the common-time-range grid check and the accounting simulation) are described in [docs/JNE_2026_REVISION.md](docs/JNE_2026_REVISION.md), with their frozen plans in `plans/` and aggregate result summaries in `reports/jne_revision_2026-09/`.
+
 The frozen numerical results reported in the manuscript were produced before this public release. Scripts that consume restricted datasets or frozen result artifacts fail closed when those inputs are absent.
 
 ## Data are not redistributed
