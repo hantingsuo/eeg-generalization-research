@@ -48,6 +48,7 @@ The training runners (`jne_e1_seed_cross_subject.py`, `jne_e2_eegnet_seed.py`,
 paths recorded in their plans and verify the input hashes before training. The
 analyses (`jne_e1_analysis.py`, `jne_e4_analysis.py`, `jne_faced_analysis.py`,
 `jne_common_range.py`, `jne_selection_informativeness.py`) read the per-epoch records
-those runners write. Training used deterministic GPU algorithms; the optional
+those runners write; `jne_common_range_sessions.py` applies the same common grid to the
+per-epoch records of the within- and cross-session trajectories. Training used deterministic GPU algorithms; the optional
 `--duty` flag paces the GPU without changing the computation, which was checked by
 re-fitting a completed run bit-identically before it was used.
