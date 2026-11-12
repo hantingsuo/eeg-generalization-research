@@ -1,0 +1,6 @@
+﻿screen_rank,doi,status,Q1_A,Q1_B,Q1_final,Q1_adjudication,Q2_final,Q3_final,Q5_A,Q5_B,Q6_A,Q6_B,Q1_quote
+25,10.1007/s11517-026-03543-x,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,Each experiment was trained for 200 epochs with a batch size of 64.
+157,10.1007/s11517-025-03479-8,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,"using the Adam optimizer with a learning rate of 0.001, a batch size of 128, and for 200 epochs."
+F,10.1007/s11517-025-03384-0,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,training is continued for 200 epochs on an NVIDIA GeForce RTX 4070 Ti GPU.
+F,10.1007/s11517-025-03430-x,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,"Following a number of tests, we found that 200 epochs worked well for all datasets."
+F,10.1007/s11517-024-03094-z,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,BEST_ON_TEST,NA,,NA,N,N,N,Y,Y,We consider the accuracy achieved with 20% rejection rate as the ultimate accuracy of our method.

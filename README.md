@@ -14,6 +14,8 @@ The repository studies how subject partitioning, checkpoint selection, admissibl
 
 **2026 revision.** The analyses added for the Journal of Neural Engineering submission (participant hold-outs with and without target calibration labels, the matched-session control, EEGNet, the FACED external dataset with a stimulus hold-out, the common-time-range grid check and the accounting simulation) are described in [docs/JNE_2026_REVISION.md](docs/JNE_2026_REVISION.md), with their frozen plans in `plans/` and aggregate result summaries in `reports/jne_revision_2026-09/`.
 
+**November 2026 additions.** The pre-specified all-session SEED repeat (plan, runner, tests, summary) and the records of the reporting survey (`reports/mbec_2026-11/`) are described in [docs/ADDITIONS_2026-11.md](docs/ADDITIONS_2026-11.md).
+
 The frozen numerical results reported in the manuscript were produced before this public release. Scripts that consume restricted datasets or frozen result artifacts fail closed when those inputs are absent.
 
 ## Data are not redistributed
