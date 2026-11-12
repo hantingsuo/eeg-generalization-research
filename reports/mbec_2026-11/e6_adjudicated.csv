@@ -1,0 +1,38 @@
+﻿screen_rank,doi,status,Q1_A,Q1_B,Q1_final,Q1_adjudication,Q2_final,Q3_final,Q5_A,Q5_B,Q6_A,Q6_B,Q1_quote
+1,10.3390/e27090986,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,NOT_STATED,NA,,NA,N,N,N,N,N,Training set: EEG data from the first 7 subjects. Test set: EEG data from the last 8 subjects.
+2,10.1922/pjs.16.7s.2026.1141,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,N,N,"These experiments each have a 50-epoch runtime, where an epoch is one complete iteration of the training algorithm over the training images."
+4,10.1109/access.2026.3692665,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,Y,Y,N,N,The TS-CNN-LSTM model was trained using the Adam optimizer with a maximum of 100 epochs and a mini-batch size of 100.
+11,10.1007/s44163-026-01314-z,ANALYSED,VALIDATION,VALIDATION,VALIDATION,,SOURCE_SUBJECTS,Y,Y,Y,N,N,"employing early stopping based on validation loss to prevent overfitting. Additionally, the model state has been saved with the lowest validation loss (model checkpointing) for [...]"
+12,10.3389/fnhum.2024.1471634,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,N,N,Y,Y,We adopt the leave-one-subject-out (LOSO) cross-validation strategy to partition the dataset.
+14,10.3389/fnins.2026.1846592,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,The total number of training epochs is fixed at 500.
+17,10.1109/access.2025.3574515,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,N,N,Y,Y,the final model accuracy averages all subjects' emotion prediction accuracy
+23,10.26599/tst.2026.9010060,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,Y,Y,Y,Y,The training process spans 100 epochs.
+24,10.1186/s40708-024-00245-8,EXCLUDED: cross-subject protocol unclear (both coders),NOT_STATED,NOT_STATED,NA,,NA,N,N,N,N,N,"The model's performance on the testing set was recorded for each training session, and the experimental results presented in this paper are the average performance [...]"
+27,10.1088/1741-2552/acae06,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,N,N,Y,Y,which tests our DAGAM on one subject and trains on the remaining subjects for each fold.
+30,10.3389/fnins.2023.1213099,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,NOT_STATED,NA,,NA,N,N,N,N,N,The objective values of LDG usually converge in less than 30 iterations.
+34,10.1109/access.2025.3540436,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,Y,Y,Y,Y,the EEG data from another randomly selected subject serves as the target domain
+42,10.3389/fpsyt.2025.1494369,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,The DANN architecture was trained using stochastic gradient descent (SGD) with a learning rate of 0.01 and a total of 100 epochs.
+43,10.3389/fnhum.2023.1280241,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,N,N,Y,Y,"only 0.1% of the target domain samples were used for fine-tuning training, while the remaining samples were used for testing."
+45,10.3390/brainsci16050507,ANALYSED,NOT_STATED,FIXED_LAST,FIXED_LAST,"accuracy ""recorded at the end of each experiment"", 200 epochs",NA,Y,Y,Y,Y,Y,"The accuracy was recorded at the end of each experiment, and the average accuracy was calculated across all trials."
+49,10.1109/taffc.2022.3164516,ANALYSED,VALIDATION,VALIDATION,VALIDATION,,UNCLEAR,Y,Y,Y,N,N,we trained the model for 100 epochs with early stopping (maximal tolerance of 30 epochs without validation accuracy increase)
+50,10.3390/diagnostics16010144,ANALYSED,NOT_STATED,FIXED_LAST,CONTRADICTORY,methods state fixed epochs; results section mentions early stopping,NA,Y,Y,Y,N,N,we chose to train each model on a fixed number of epochs to maintain a consistent number of training epochs across all subjects for our [...]
+53,10.1007/s11760-025-04819-9,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,N,N,Y,Y,"As the number of iterations reaches 500, the values of all the loss functions converge and decrease"
+64,10.3390/brainsci13070977,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,BEST_ON_TEST,NA,,NA,N,N,N,N,N,we defined the fitness function as the accuracy of the PDPL recognition on the test set
+66,10.1016/j.eswa.2025.130843,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,Y,Y,Y,"The SS method was trained for 20 epochs, while the AS method was trained for 30 epochs. Beyond these training epochs, the classification results of [...]"
+69,10.3389/fnhum.2024.1464431,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,Y,Y,Y,Y,Number of epoch 50 200
+82,10.1109/access.2024.3458833,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,Y,Y,N,N,EEG segments from one subject are left out from the training set and used as the test set
+89,10.54392/bsr2513,EXCLUDED: cross-subject protocol on SEED unclear (coders disagree; text too sparse),NOT_STATED,NOT_STATED,NA,,NA,N,N,N,Y,UNCLEAR,We used a leave-one-subject-out (LOSO) cross-validation scheme to thoroughly test how well the model works on subjects it hasn't seen before.
+90,10.1109/tnsre.2023.3236687,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,NOT_STATED,NA,,NA,N,N,N,Y,Y,"in 45 experiments involving 15 subjects, the average accuracy of MEDA for single-to-single classification was 63.0%"
+95,10.1038/s41598-025-13289-5,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,Y,Y,Y,Y,
+102,10.1109/tnsre.2025.3603190,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,N,Y,Y,Y,Y,The total number of training epochs is denoted as E
+113,10.3390/brainsci14030271,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,Y,Y,N,N,"If the average AUC reached 0.99 during the training process, the training process was stopped, and the last saved model weights were used to categorize [...]"
+116,10.1186/s40537-026-01584-5,ANALYSED,VALIDATION,VALIDATION,VALIDATION,,SOURCE_SUBJECTS,Y,N,N,Y,Y,"The training is capped at a maximum of 1000 epochs, and we select the model that performs best as our final choice."
+117,10.3934/mbe.2024210,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",NOT_STATED,BEST_ON_TEST,NA,,NA,Y,N,N,N,N,The classification error of the training and testing sets is used as the fitness.
+121,10.1109/jbhi.2025.3580612,"EXCLUDED_FROM_Q1: non-neural method, no checkpoints",BEST_ON_TEST,BEST_ON_TEST,NA,,NA,N,N,N,Y,Y,"the combination that achieves the highest accuracy in predicting target domain labels will be chosen as the optimal outcome. Notably, all the best results are [...]"
+122,10.3389/fnhum.2026.1723907,ANALYSED,VALIDATION,VALIDATION,VALIDATION,,UNCLEAR,Y,N,N,N,N,a “save-best” strategy is employed to retain the model with the highest validation accuracy.
+130,10.1371/journal.pone.0322583,EXCLUDED: not cross-subject (pooled random folds),NA,NA,NA,,NA,NA,NA,NA,NA,NA,
+131,10.53941/tai.2025.100018,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,N,N,The number of epochs is set to 300 for the training process.
+146,10.1016/j.bspc.2024.107337,ANALYSED,NOT_STATED,BEST_ON_TEST,NOT_STATED,"""ACC-best"" is best of three LOO rounds, not an epoch choice; epoch rule not stated",NA,Y,Y,Y,Y,Y,The proposed MS-DCDA model is trained with Adam optimizer for 50 epochs.
+150,10.3390/s26103217,ANALYSED,NOT_STATED,NOT_STATED,NOT_STATED,,NA,Y,N,N,Y,Y,"all experimental training epochs are uniformly set to 300, and the batch size is set to 128"
+161,10.1109/jbhi.2026.3708734,ANALYSED,BEST_ON_TEST,BEST_ON_TEST,BEST_ON_TEST,,NA,Y,N,N,Y,Y,"we compare the best accuracy observed throughout training with the final accuracy at convergence. Prior work typically reports only the best recorded accuracy, which may [...]"
+168,10.1109/ojcs.2026.3653766,ANALYSED,VALIDATION,VALIDATION,VALIDATION,,SOURCE_SUBJECTS,Y,Y,Y,N,N,We trained for up to 100 epochs with early stopping (patience = 15 epochs) to prevent overfitting and reduce training time.
